@@ -1,15 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 260" role="img" aria-labelledby="title desc">
   <title id="title">Medveri</title>
-  <desc id="desc">Medveri wordmark</desc>
+  <desc id="desc">Medveri medical technology logo</desc>
   <defs>
-    <linearGradient id="mark" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#2563eb"/>
-      <stop offset="0.55" stop-color="#14b8a6"/>
-      <stop offset="1" stop-color="#f59e0b"/>
+    <linearGradient id="medveriBlue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#082f70"/>
+      <stop offset="0.45" stop-color="#0b4e91"/>
+      <stop offset="1" stop-color="#00bfd6"/>
+    </linearGradient>
+    <linearGradient id="medveriText" x1="0" x2="1" y1="0">
+      <stop offset="0" stop-color="#082f70"/>
+      <stop offset="0.52" stop-color="#0b3f84"/>
+      <stop offset="1" stop-color="#00aebd"/>
     </linearGradient>
   </defs>
-  <rect width="320" height="120" rx="22" fill="#0f172a"/>
-  <path d="M42 82V38h14l14 23 14-23h14v44H84V58L73 76h-6L56 58v24H42Z" fill="url(#mark)"/>
-  <text x="112" y="69" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="0">Medveri</text>
-  <text x="116" y="91" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2">SOFTWARE TECHNOLOGIES</text>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M92 82h54V34c0-17 14-31 31-31h54c17 0 31 14 31 31v48h54c17 0 31 14 31 31v54c0 17-14 31-31 31h-54v48c0 17-14 31-31 31h-54c-17 0-31-14-31-31v-48H92c-17 0-31-14-31-31v-54c0-17 14-31 31-31Z" stroke="url(#medveriBlue)" stroke-width="22"/>
+    <path d="M108 140h68l23-52 27 93 38-72h62" stroke="#11c5dc" stroke-width="17"/>
+    <path d="M263 109h72m-46 32h86m-88 40h78" stroke="#03a8bb" stroke-width="14"/>
+    <circle cx="381" cy="109" r="13" fill="#03a8bb" stroke="none"/>
+    <circle cx="420" cy="141" r="13" fill="#03a8bb" stroke="none"/>
+    <circle cx="398" cy="181" r="13" fill="#03a8bb" stroke="none"/>
+  </g>
+  <text x="455" y="165" fill="url(#medveriText)" font-family="Inter, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="4">MEDVER&#304;</text>
 </svg>
