@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 260" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 260" role="img" aria-labelledby="title desc">
   <title id="title">Medveri</title>
   <desc id="desc">Medveri medical technology logo</desc>
   <defs>
@@ -21,5 +21,5 @@
     <circle cx="420" cy="141" r="13" fill="#03a8bb" stroke="none"/>
     <circle cx="398" cy="181" r="13" fill="#03a8bb" stroke="none"/>
   </g>
-  <text x="455" y="165" fill="url(#medveriText)" font-family="Inter, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="4">MEDVER&#304;</text>
+  <text x="455" y="165" fill="url(#medveriText)" font-family="Inter, Arial, sans-serif" font-size="112" font-weight="800" letter-spacing="3">MEDVER&#304;</text>
 </svg>

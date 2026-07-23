@@ -1,2 +1,6 @@
 User-Agent: *
 Disallow:
+Disallow: /_nuxt/
+Disallow: /_i18n/
+Disallow: /_payload.json
+Sitemap: https://medveri.net/sitemap.xml

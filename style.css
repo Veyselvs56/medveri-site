@@ -22,6 +22,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   background: radial-gradient(circle at top left, rgba(21, 191, 214, 0.12), transparent 34%), var(--bg);
   color: var(--text);
   font-family: Inter, Arial, sans-serif;
@@ -35,7 +36,7 @@ a {
 .site-header {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 22px 0;
+  padding: 22px 0 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,7 +44,7 @@ a {
 }
 
 .brand img {
-  width: 210px;
+  width: 230px;
   max-width: 48vw;
   height: auto;
   display: block;
@@ -75,12 +76,12 @@ main {
 }
 
 .hero {
-  min-height: calc(100vh - 160px);
+  min-height: auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
-  gap: 56px;
+  grid-template-columns: minmax(0, 0.98fr) minmax(300px, 1.02fr);
+  gap: 44px;
   align-items: center;
-  padding: 56px 0 72px;
+  padding: 74px 0 78px;
 }
 
 .hero-copy,
@@ -104,13 +105,18 @@ p {
 }
 
 h1 {
-  font-size: clamp(42px, 7vw, 82px);
-  line-height: 0.96;
+  font-size: clamp(42px, 5.4vw, 68px);
+  line-height: 1.05;
   margin-bottom: 24px;
+  max-width: 720px;
 }
 
 .page-hero h1 {
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(40px, 5vw, 62px);
+}
+
+.page-hero.slim {
+  padding: 54px 0 42px;
 }
 
 .hero-copy p,
@@ -152,7 +158,7 @@ h1 {
 .hero-mark {
   background: #ffffff;
   border-radius: 8px;
-  padding: 42px;
+  padding: 34px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.26);
 }
 
@@ -166,7 +172,7 @@ h1 {
 .page-hero,
 .content-panel,
 .contact-panel {
-  padding: 72px 0;
+  padding: 64px 0;
 }
 
 .section-heading {
@@ -187,6 +193,7 @@ h1 {
 }
 
 .feature-grid.compact {
+  margin-top: 24px;
   padding-bottom: 80px;
 }
 
@@ -215,7 +222,7 @@ h1 {
 }
 
 .content-panel {
-  padding: 34px;
+  padding: 34px 36px;
 }
 
 .content-panel p:last-child {
@@ -224,15 +231,16 @@ h1 {
 
 .contact-panel {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 34px;
-  padding: 34px;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  gap: 44px;
+  align-items: start;
+  padding: 38px 36px;
   margin-bottom: 72px;
 }
 
 .contact-panel a {
   color: var(--cyan);
-  font-size: 20px;
+  font-size: clamp(18px, 2vw, 22px);
   font-weight: 800;
   text-decoration: none;
   word-break: break-word;
@@ -288,6 +296,14 @@ textarea {
   .hero,
   .contact-panel {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  h1 {
+    font-size: clamp(38px, 12vw, 58px);
   }
 
   .feature-grid {
