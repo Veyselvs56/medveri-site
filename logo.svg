@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-labelledby="title desc">
-  <title id="title">Madveri</title>
-  <desc id="desc">Madveri wordmark</desc>
+  <title id="title">Medveri</title>
+  <desc id="desc">Medveri wordmark</desc>
   <defs>
     <linearGradient id="mark" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#2563eb"/>
@@ -10,6 +10,6 @@
   </defs>
   <rect width="320" height="120" rx="22" fill="#0f172a"/>
   <path d="M42 82V38h14l14 23 14-23h14v44H84V58L73 76h-6L56 58v24H42Z" fill="url(#mark)"/>
-  <text x="112" y="69" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="0">Madveri</text>
+  <text x="112" y="69" fill="#f8fafc" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="0">Medveri</text>
   <text x="116" y="91" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2">SOFTWARE TECHNOLOGIES</text>
 </svg>
