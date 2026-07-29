@@ -20,30 +20,38 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Medveri","url":"https://medveri.global/","logo":"https://medveri.global/logo.svg","email":"info@medveri.global"}</script>
 </head>
 <body>
+
   <header class="site-header">
     <div class="header-container">
       <a class="brand" href="#home" aria-label="Medveri ana sayfa">
         <img src="/logo.svg" alt="Medveri">
       </a>
       <nav class="nav" aria-label="Ana menü">
-        <a href="#home" aria-current="page">Ana Sayfa</a>
-        <a href="#games">Oyunlarımız</a>
-        <a href="#about">Hakkımızda</a>
-        <a href="#contact">İletişim</a>
+        <a href="#home" aria-current="page" data-i18n="nav_home">Ana Sayfa</a>
+        <a href="#games" data-i18n="nav_games">Oyunlarımız</a>
+        <a href="#about" data-i18n="nav_about">Hakkımızda</a>
+        <a href="#contact" data-i18n="nav_contact">İletişim</a>
       </nav>
+      <div class="header-controls">
+        <button class="ctrl-btn lang-btn active" id="btn-tr" data-lang="tr">TR</button>
+        <button class="ctrl-btn lang-btn" id="btn-en" data-lang="en">EN</button>
+        <div class="ctrl-divider"></div>
+        <button class="ctrl-btn" id="theme-toggle" title="Tema değiştir">☀️</button>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- Ana Sayfa (Hero) Bölümü -->
+
+    <!-- ── HERO ── -->
     <section id="home" class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Yazılım Teknolojileri ve Elektronik Hizmetler</p>
-        <h1>Güvenilir, hızlı ve sürdürülebilir dijital çözümler.</h1>
-        <p>Medveri, yazılım teknolojileri ve elektronik hizmetler alanında kullanıcı odaklı ürünler geliştirir; kurumların dijital süreçlerini daha verimli ve güvenli hale getirir.</p>
+        <p class="eyebrow" data-i18n="hero_eyebrow">Yazılım Teknolojileri ve Elektronik Hizmetler</p>
+        <h1 data-i18n="hero_title">Güvenilir, hızlı ve sürdürülebilir dijital çözümler.</h1>
+        <p data-i18n="hero_desc">Medveri, yazılım teknolojileri ve elektronik hizmetler alanında kullanıcı odaklı ürünler geliştirir; kurumların dijital süreçlerini daha verimli ve güvenli hale getirir.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#about">Hakkımızda</a>
-          <a class="button ghost" href="#contact">Bize Ulaşın</a>
+          <a class="button primary" href="#about" data-i18n="hero_btn_about">Hakkımızda</a>
+          <a class="button ghost" href="#contact" data-i18n="hero_btn_contact">Bize Ulaşın</a>
         </div>
       </div>
       <div class="hero-mark" aria-hidden="true">
@@ -51,185 +59,218 @@
       </div>
     </section>
 
-    <!-- Ne Yapıyoruz Bölümü -->
+    <!-- ── NE YAPIYORUZ ── -->
     <section class="section">
       <div class="section-heading">
-        <h2>Ne Yapıyoruz?</h2>
-        <p>Dijital ürünler, yazılım altyapıları ve elektronik hizmetler için temiz, sürdürülebilir ve ölçeklenebilir çözümler üretiriz.</p>
+        <h2 data-i18n="what_we_do_title">Ne Yapıyoruz?</h2>
+        <p data-i18n="what_we_do_desc">Dijital ürünler, yazılım altyapıları ve elektronik hizmetler için temiz, sürdürülebilir ve ölçeklenebilir çözümler üretiriz.</p>
       </div>
       <div class="feature-grid">
         <article class="feature-card">
-          <h3>Yazılım Geliştirme</h3>
-          <p>İhtiyaca uygun web, panel ve dijital ürün çözümleri geliştiririz.</p>
+          <h3 data-i18n="sw_dev_title">Yazılım Geliştirme</h3>
+          <p data-i18n="sw_dev_desc">İhtiyaca uygun web, panel ve dijital ürün çözümleri geliştiririz.</p>
         </article>
         <article class="feature-card">
-          <h3>Dijital Hizmetler</h3>
-          <p>Markaların operasyonlarını destekleyen güvenilir elektronik hizmet altyapıları sunarız.</p>
+          <h3 data-i18n="digital_title">Dijital Hizmetler</h3>
+          <p data-i18n="digital_desc">Markaların operasyonlarını destekleyen güvenilir elektronik hizmet altyapıları sunarız.</p>
         </article>
         <article class="feature-card">
-          <h3>Teknik Süreçler</h3>
-          <p>Projelerde süreklilik, bakım ve kullanıcı deneyimini merkeze alan teknik yaklaşım izleriz.</p>
+          <h3 data-i18n="tech_title">Teknik Süreçler</h3>
+          <p data-i18n="tech_desc">Projelerde süreklilik, bakım ve kullanıcı deneyimini merkeze alan teknik yaklaşım izleriz.</p>
         </article>
       </div>
     </section>
 
-    <!-- Oyunlarımız Bölümü -->
+    <!-- ── OYUNLARIMIZ ── -->
     <section id="games" class="section">
       <div class="section-heading">
-        <h2>Oyunlarımız</h2>
-        <p>Geliştirdiğimiz özgün, eğlenceli ve modern oyun projelerimizi keşfedin. Detaylı görseller için oyunlara tıklayabilirsiniz.</p>
+        <h2 data-i18n="games_title">Oyunlarımız</h2>
+        <p data-i18n="games_desc">Geliştirdiğimiz özgün, eğlenceli ve modern oyun projelerimizi keşfedin. Detaylı görseller için oyunlara tıklayabilirsiniz.</p>
       </div>
       <div class="games-grid">
+
         <!-- Lingo -->
-        <article class="game-card" data-game="Lingo" data-images="/media/Oyun_gorselleri/lingo/img1.png,/media/Oyun_gorselleri/lingo/img2.png,/media/Oyun_gorselleri/lingo/img3.png">
+        <article class="game-card"
+          data-game="Lingo"
+          data-images="/media/Oyun_gorselleri/lingo/img1.png,/media/Oyun_gorselleri/lingo/img2.png,/media/Oyun_gorselleri/lingo/img3.png">
           <div class="game-cover">
-            <img src="/media/Oyun_gorselleri/lingo/img1.png" alt="Lingo">
-            <div class="cover-overlay">
-              <span>Galeriyi Gör</span>
-            </div>
+            <img src="/media/Oyun_gorselleri/lingo/img1.png" alt="Lingo" loading="lazy">
+            <div class="cover-overlay"><span data-i18n="gallery_btn">Galeriyi Gör</span></div>
           </div>
           <div class="game-info">
             <h3>Lingo</h3>
-            <p>Zorlu kelime bulmacaları ve harf tahmin oyunu.</p>
+            <p data-i18n="lingo_desc">Zorlu kelime bulmacaları ve harf tahmin oyunu.</p>
           </div>
         </article>
 
         <!-- Okey -->
-        <article class="game-card" data-game="Okey" data-images="/media/Oyun_gorselleri/okey/img1.png,/media/Oyun_gorselleri/okey/img2.png,/media/Oyun_gorselleri/okey/img3.png,/media/Oyun_gorselleri/okey/img4.png,/media/Oyun_gorselleri/okey/img5.png,/media/Oyun_gorselleri/okey/img6.png,/media/Oyun_gorselleri/okey/img7.png,/media/Oyun_gorselleri/okey/img8.png,/media/Oyun_gorselleri/okey/img9.png">
+        <article class="game-card"
+          data-game="Okey"
+          data-images="/media/Oyun_gorselleri/okey/img1.png,/media/Oyun_gorselleri/okey/img2.png,/media/Oyun_gorselleri/okey/img3.png,/media/Oyun_gorselleri/okey/img4.png,/media/Oyun_gorselleri/okey/img5.png,/media/Oyun_gorselleri/okey/img6.png,/media/Oyun_gorselleri/okey/img7.png,/media/Oyun_gorselleri/okey/img8.png,/media/Oyun_gorselleri/okey/img9.png">
           <div class="game-cover">
-            <img src="/media/Oyun_gorselleri/okey/img1.png" alt="Okey">
-            <div class="cover-overlay">
-              <span>Galeriyi Gör</span>
-            </div>
+            <img src="/media/Oyun_gorselleri/okey/img1.png" alt="Okey" loading="lazy">
+            <div class="cover-overlay"><span data-i18n="gallery_btn">Galeriyi Gör</span></div>
           </div>
           <div class="game-info">
             <h3>Okey</h3>
-            <p>Akıcı yapay zeka ve modern tasarımıyla klasik okey keyfi.</p>
+            <p data-i18n="okey_desc">Akıcı yapay zeka ve modern tasarımıyla klasik okey keyfi.</p>
           </div>
         </article>
 
         <!-- Platform -->
-        <article class="game-card" data-game="Platform" data-images="/media/Oyun_gorselleri/platform/img1.png,/media/Oyun_gorselleri/platform/img2.png,/media/Oyun_gorselleri/platform/img3.png,/media/Oyun_gorselleri/platform/img4.png">
+        <article class="game-card"
+          data-game="Platform"
+          data-images="/media/Oyun_gorselleri/platform/img1.png,/media/Oyun_gorselleri/platform/img2.png,/media/Oyun_gorselleri/platform/img3.png,/media/Oyun_gorselleri/platform/img4.png">
           <div class="game-cover">
-            <img src="/media/Oyun_gorselleri/platform/img1.png" alt="Platform">
-            <div class="cover-overlay">
-              <span>Galeriyi Gör</span>
-            </div>
+            <img src="/media/Oyun_gorselleri/platform/img1.png" alt="Platform" loading="lazy">
+            <div class="cover-overlay"><span data-i18n="gallery_btn">Galeriyi Gör</span></div>
           </div>
           <div class="game-info">
             <h3>Platform</h3>
-            <p>Hassas kontrol gerektiren refleks ve macera oyunu.</p>
+            <p data-i18n="platform_desc">Hassas kontrol gerektiren refleks ve macera oyunu.</p>
           </div>
         </article>
 
         <!-- Savaş Yarışı -->
-        <article class="game-card" data-game="Savaş Yarışı" data-images="/media/Oyun_gorselleri/savas_yarisi/img1.png,/media/Oyun_gorselleri/savas_yarisi/img2.png,/media/Oyun_gorselleri/savas_yarisi/img3.png,/media/Oyun_gorselleri/savas_yarisi/img4.png,/media/Oyun_gorselleri/savas_yarisi/img5.png">
+        <article class="game-card"
+          data-game="Savaş Yarışı"
+          data-images="/media/Oyun_gorselleri/savas_yarisi/img1.png,/media/Oyun_gorselleri/savas_yarisi/img2.png,/media/Oyun_gorselleri/savas_yarisi/img3.png,/media/Oyun_gorselleri/savas_yarisi/img4.png,/media/Oyun_gorselleri/savas_yarisi/img5.png">
           <div class="game-cover">
-            <img src="/media/Oyun_gorselleri/savas_yarisi/img1.png" alt="Savaş Yarışı">
-            <div class="cover-overlay">
-              <span>Galeriyi Gör</span>
-            </div>
+            <img src="/media/Oyun_gorselleri/savas_yarisi/img1.png" alt="Savaş Yarışı" loading="lazy">
+            <div class="cover-overlay"><span data-i18n="gallery_btn">Galeriyi Gör</span></div>
           </div>
           <div class="game-info">
             <h3>Savaş Yarışı</h3>
-            <p>Çatışma ve hızın birleştiği aksiyon dolu yarış simülasyonu.</p>
+            <p data-i18n="savas_desc">Çatışma ve hızın birleştiği aksiyon dolu yarış simülasyonu.</p>
           </div>
         </article>
 
         <!-- Siyaset -->
-        <article class="game-card" data-game="Siyaset" data-images="/media/Oyun_gorselleri/siyaset/img1.png,/media/Oyun_gorselleri/siyaset/img2.png,/media/Oyun_gorselleri/siyaset/img3.png,/media/Oyun_gorselleri/siyaset/img4.png,/media/Oyun_gorselleri/siyaset/img5.png">
+        <article class="game-card"
+          data-game="Siyaset"
+          data-images="/media/Oyun_gorselleri/siyaset/img1.png,/media/Oyun_gorselleri/siyaset/img2.png,/media/Oyun_gorselleri/siyaset/img3.png,/media/Oyun_gorselleri/siyaset/img4.png,/media/Oyun_gorselleri/siyaset/img5.png">
           <div class="game-cover">
-            <img src="/media/Oyun_gorselleri/siyaset/img1.png" alt="Siyaset">
-            <div class="cover-overlay">
-              <span>Galeriyi Gör</span>
-            </div>
+            <img src="/media/Oyun_gorselleri/siyaset/img1.png" alt="Siyaset" loading="lazy">
+            <div class="cover-overlay"><span data-i18n="gallery_btn">Galeriyi Gör</span></div>
           </div>
           <div class="game-info">
             <h3>Siyaset</h3>
-            <p>Stratejik kararlar ve seçim kampanyalarıyla yönetim simülasyonu.</p>
+            <p data-i18n="siyaset_desc">Stratejik kararlar ve seçim kampanyalarıyla yönetim simülasyonu.</p>
           </div>
         </article>
+
       </div>
     </section>
 
-    <!-- Hakkımızda Bölümü -->
+    <!-- ── HAKKIMIZDA ── -->
     <section id="about" class="section">
       <div class="section-heading">
-        <h2>Hakkımızda</h2>
-        <p>Medveri, dijital dünyada güvenilir çözümler üretir.</p>
+        <h2 data-i18n="about_title">Hakkımızda</h2>
+        <p data-i18n="about_desc">Medveri, dijital dünyada güvenilir çözümler üretir.</p>
       </div>
       <div class="content-panel">
-        <p>MEDVERİ BİLİŞİM YAZILIM TEKNOLOJİLERİ VE ELEKTRONİK HİZMETLER LİMİTED ŞİRKETİ, yazılım teknolojileri ve elektronik hizmetler alanında faaliyet göstermektedir.</p>
-        <p>Dijital ürünler ve elektronik hizmetler odağında; güvenilir, hızlı ve kullanıcı odaklı çözümler sunmayıp hedeflemekteyiz. Teknolojik gelişmeleri yakından takip ederek müşterilerimize güncel, sürdürülebilir ve uygulanabilir dijital ürünler sağlamaktayız.</p>
+        <p data-i18n="about_p1">MEDVERİ BİLİŞİM YAZILIM TEKNOLOJİLERİ VE ELEKTRONİK HİZMETLER LİMİTED ŞİRKETİ, yazılım teknolojileri ve elektronik hizmetler alanında faaliyet göstermektedir.</p>
+        <p data-i18n="about_p2">Dijital ürünler ve elektronik hizmetler odağında; güvenilir, hızlı ve kullanıcı odaklı çözümler sunmayı hedeflemekteyiz. Teknolojik gelişmeleri yakından takip ederek müşterilerimize güncel, sürdürülebilir ve uygulanabilir dijital ürünler sağlamaktayız.</p>
       </div>
       <div class="feature-grid compact">
         <article class="feature-card">
-          <h3>Misyonumuz</h3>
-          <p>Kullanıcı ihtiyaçlarını merkeze alarak güvenli altyapı, şeffaf süreçler ve yüksek memnuniyet sunmak.</p>
+          <h3 data-i18n="mission_title">Misyonumuz</h3>
+          <p data-i18n="mission_desc">Kullanıcı ihtiyaçlarını merkeze alarak güvenli altyapı, şeffaf süreçler ve yüksek memnuniyet sunmak.</p>
         </article>
         <article class="feature-card">
-          <h3>Vizyonumuz</h3>
-          <p>Dijital ürün ve yazılım alanında güvenilir, yenilikçi ve tercih edilen bir marka olmak.</p>
+          <h3 data-i18n="vision_title">Vizyonumuz</h3>
+          <p data-i18n="vision_desc">Dijital ürün ve yazılım alanında güvenilir, yenilikçi ve tercih edilen bir marka olmak.</p>
         </article>
         <article class="feature-card">
-          <h3>Değerlerimiz</h3>
-          <p>Kalite, süreklilik, ekip çalışması ve kullanıcıya gerçek değer sağlayan çözümler üretmek.</p>
+          <h3 data-i18n="values_title">Değerlerimiz</h3>
+          <p data-i18n="values_desc">Kalite, süreklilik, ekip çalışması ve kullanıcıya gerçek değer sağlayan çözümler üretmek.</p>
         </article>
+      </div>
+
+      <!-- Kurumsal Bilgiler / Company Info -->
+      <div class="company-info-panel">
+        <h3 class="company-info-label" data-i18n="company_info_title">Kurumsal Bilgiler</h3>
+        <div class="company-info-grid">
+          <div class="info-item">
+            <span class="info-label" data-i18n="tax_office_label">Vergi Dairesi</span>
+            <span class="info-value">HARPUT</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label" data-i18n="tax_no_label">Vergi Kimlik No</span>
+            <span class="info-value">6141917898</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label" data-i18n="tax_type_label">Vergi Türü</span>
+            <span class="info-value" data-i18n="tax_type_value">KURUMLAR VERGİSİ</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label" data-i18n="start_date_label">İşe Başlama Tarihi</span>
+            <span class="info-value">22.07.2026</span>
+          </div>
+          <div class="info-item full-width">
+            <span class="info-label" data-i18n="address_label">İş Yeri Adresi</span>
+            <span class="info-value">ATAŞEHİR MAH. 2513 SK. NO: 3/1 MERKEZ / ELAZIĞ</span>
+          </div>
+          <div class="info-item full-width">
+            <span class="info-label" data-i18n="activity_label">Ana Faaliyet</span>
+            <span class="info-value" data-i18n="activity_value">621000 — Bilgisayar Programlama Faaliyetleri (Sistem, Veri Tabanı, Network, Web Sayfası vb. Yazılımları ile Müşteriye Özel Yazılımların Kodlanması, Masaüstü ya da Mobil Cihazlar için Uygulama Geliştirme)</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- İletişim Bölümü -->
+    <!-- ── İLETİŞİM ── -->
     <section id="contact" class="section">
       <div class="section-heading">
-        <h2>İletişim</h2>
-        <p>Kurumsal talepleriniz ve iş birlikleri için bize ulaşabilirsiniz.</p>
+        <h2 data-i18n="contact_title">İletişim</h2>
+        <p data-i18n="contact_desc">Kurumsal talepleriniz ve iş birlikleri için bize ulaşabilirsiniz.</p>
       </div>
       <div class="contact-panel">
         <div class="contact-details">
           <div class="contact-item">
-            <h3>E-posta</h3>
+            <h3 data-i18n="email_label">E-posta</h3>
             <a href="mailto:info@medveri.global">info@medveri.global</a>
           </div>
-          <div class="contact-item" style="margin-top: 32px;">
-            <h3>Adres</h3>
-            <p style="color: var(--muted); font-size: 18px; line-height: 1.6; margin: 8px 0 0 0;">Ataşehir Mah. 2513 Sk No3/1 Elazığ/Merkez</p>
+          <div class="contact-item" style="margin-top:32px">
+            <h3 data-i18n="address_contact_label">Adres</h3>
+            <p style="color:var(--muted);font-size:16px;line-height:1.6;margin:8px 0 0">Ataşehir Mah. 2513 Sk No:3/1<br>Elazığ / Merkez</p>
           </div>
         </div>
         <form action="mailto:info@medveri.global" method="post" enctype="text/plain">
           <label>
-            Adınız
+            <span data-i18n="form_name">Adınız</span>
             <input name="name" type="text" autocomplete="name" required>
           </label>
           <label>
-            E-posta Adresiniz
+            <span data-i18n="form_email">E-posta Adresiniz</span>
             <input name="email" type="email" autocomplete="email" required>
           </label>
           <label>
-            Mesajınız
+            <span data-i18n="form_message">Mesajınız</span>
             <textarea name="message" rows="5" required></textarea>
           </label>
-          <button class="button primary" type="submit">Gönder</button>
+          <button class="button primary" type="submit" data-i18n="form_send">Gönder</button>
         </form>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 MEDVERİ BİLİŞİM YAZILIM TEKNOLOJİLERİ VE ELEKTRONİK HİZMETLER LİMİTED ŞİRKETİ. Tüm hakları saklıdır.</p>
+    <p>&copy; 2026 MEDVERİ BİLİŞİM YAZILIM TEKNOLOJİLERİ VE ELEKTRONİK HİZMETLER LİMİTED ŞİRKETİ. <span data-i18n="footer_rights">Tüm hakları saklıdır.</span></p>
+    <p style="margin:6px 0 0"><span data-i18n="tax_no_label">Vergi Kimlik No</span>: <strong>6141917898</strong> &nbsp;|&nbsp; <span data-i18n="tax_office_label">Vergi Dairesi</span>: HARPUT &nbsp;|&nbsp; <a href="mailto:info@medveri.global">info@medveri.global</a></p>
   </footer>
 
-  <!-- Oyun Galerisi Modalı -->
+  <!-- Gallery Modal -->
   <div id="gallery-modal" class="modal-overlay" aria-hidden="true" role="dialog">
     <div class="modal-container">
       <button class="modal-close" id="close-gallery" aria-label="Kapat">&times;</button>
       <h2 id="gallery-title" class="modal-title">Oyun Galerisi</h2>
-      <div id="gallery-grid" class="gallery-grid">
-        <!-- JavaScript ile doldurulacak -->
-      </div>
+      <div id="gallery-grid" class="gallery-grid"></div>
     </div>
   </div>
 
-  <!-- Tam Ekran Görsel Modalı (Lightbox) -->
+  <!-- Lightbox Modal -->
   <div id="lightbox-modal" class="modal-overlay lightbox" aria-hidden="true" role="dialog">
     <button class="modal-close lightbox-close" id="close-lightbox" aria-label="Kapat">&times;</button>
     <button class="lightbox-arrow prev" id="prev-lightbox" aria-label="Önceki Görsel">&#10094;</button>
@@ -239,254 +280,299 @@
     </div>
   </div>
 
-  <!-- Etkileşim Scripti -->
   <script>
+    /* ─────────────────────────────────
+       TRANSLATIONS
+    ───────────────────────────────── */
+    const I18N = {
+      tr: {
+        nav_home: 'Ana Sayfa',
+        nav_games: 'Oyunlarımız',
+        nav_about: 'Hakkımızda',
+        nav_contact: 'İletişim',
+        hero_eyebrow: 'Yazılım Teknolojileri ve Elektronik Hizmetler',
+        hero_title: 'Güvenilir, hızlı ve sürdürülebilir dijital çözümler.',
+        hero_desc: 'Medveri, yazılım teknolojileri ve elektronik hizmetler alanında kullanıcı odaklı ürünler geliştirir; kurumların dijital süreçlerini daha verimli ve güvenli hale getirir.',
+        hero_btn_about: 'Hakkımızda',
+        hero_btn_contact: 'Bize Ulaşın',
+        what_we_do_title: 'Ne Yapıyoruz?',
+        what_we_do_desc: 'Dijital ürünler, yazılım altyapıları ve elektronik hizmetler için temiz, sürdürülebilir ve ölçeklenebilir çözümler üretiriz.',
+        sw_dev_title: 'Yazılım Geliştirme',
+        sw_dev_desc: 'İhtiyaca uygun web, panel ve dijital ürün çözümleri geliştiririz.',
+        digital_title: 'Dijital Hizmetler',
+        digital_desc: 'Markaların operasyonlarını destekleyen güvenilir elektronik hizmet altyapıları sunarız.',
+        tech_title: 'Teknik Süreçler',
+        tech_desc: 'Projelerde süreklilik, bakım ve kullanıcı deneyimini merkeze alan teknik yaklaşım izleriz.',
+        games_title: 'Oyunlarımız',
+        games_desc: 'Geliştirdiğimiz özgün, eğlenceli ve modern oyun projelerimizi keşfedin. Detaylı görseller için oyunlara tıklayabilirsiniz.',
+        gallery_btn: 'Galeriyi Gör',
+        gallery_suffix: '— Ekran Görüntüleri',
+        lingo_desc: 'Zorlu kelime bulmacaları ve harf tahmin oyunu.',
+        okey_desc: 'Akıcı yapay zeka ve modern tasarımıyla klasik okey keyfi.',
+        platform_desc: 'Hassas kontrol gerektiren refleks ve macera oyunu.',
+        savas_desc: 'Çatışma ve hızın birleştiği aksiyon dolu yarış simülasyonu.',
+        siyaset_desc: 'Stratejik kararlar ve seçim kampanyalarıyla yönetim simülasyonu.',
+        about_title: 'Hakkımızda',
+        about_desc: 'Medveri, dijital dünyada güvenilir çözümler üretir.',
+        about_p1: 'MEDVERİ BİLİŞİM YAZILIM TEKNOLOJİLERİ VE ELEKTRONİK HİZMETLER LİMİTED ŞİRKETİ, yazılım teknolojileri ve elektronik hizmetler alanında faaliyet göstermektedir.',
+        about_p2: 'Dijital ürünler ve elektronik hizmetler odağında; güvenilir, hızlı ve kullanıcı odaklı çözümler sunmayı hedeflemekteyiz. Teknolojik gelişmeleri yakından takip ederek müşterilerimize güncel, sürdürülebilir ve uygulanabilir dijital ürünler sağlamaktayız.',
+        mission_title: 'Misyonumuz',
+        mission_desc: 'Kullanıcı ihtiyaçlarını merkeze alarak güvenli altyapı, şeffaf süreçler ve yüksek memnuniyet sunmak.',
+        vision_title: 'Vizyonumuz',
+        vision_desc: 'Dijital ürün ve yazılım alanında güvenilir, yenilikçi ve tercih edilen bir marka olmak.',
+        values_title: 'Değerlerimiz',
+        values_desc: 'Kalite, süreklilik, ekip çalışması ve kullanıcıya gerçek değer sağlayan çözümler üretmek.',
+        company_info_title: 'Kurumsal Bilgiler',
+        tax_office_label: 'Vergi Dairesi',
+        tax_no_label: 'Vergi Kimlik No',
+        address_label: 'İş Yeri Adresi',
+        tax_type_label: 'Vergi Türü',
+        tax_type_value: 'KURUMLAR VERGİSİ',
+        start_date_label: 'İşe Başlama Tarihi',
+        activity_label: 'Ana Faaliyet',
+        activity_value: '621000 — Bilgisayar Programlama Faaliyetleri (Sistem, Veri Tabanı, Network, Web Sayfası vb. Yazılımları ile Müşteriye Özel Yazılımların Kodlanması, Masaüstü ya da Mobil Cihazlar için Uygulama Geliştirme)',
+        contact_title: 'İletişim',
+        contact_desc: 'Kurumsal talepleriniz ve iş birlikleri için bize ulaşabilirsiniz.',
+        email_label: 'E-posta',
+        address_contact_label: 'Adres',
+        form_name: 'Adınız',
+        form_email: 'E-posta Adresiniz',
+        form_message: 'Mesajınız',
+        form_send: 'Gönder',
+        footer_rights: 'Tüm hakları saklıdır.',
+      },
+      en: {
+        nav_home: 'Home',
+        nav_games: 'Our Games',
+        nav_about: 'About Us',
+        nav_contact: 'Contact',
+        hero_eyebrow: 'Software Technologies & Electronic Services',
+        hero_title: 'Reliable, fast and sustainable digital solutions.',
+        hero_desc: 'Medveri develops user-centered products in software technologies and electronic services, making the digital processes of institutions more efficient and secure.',
+        hero_btn_about: 'About Us',
+        hero_btn_contact: 'Contact Us',
+        what_we_do_title: 'What We Do',
+        what_we_do_desc: 'We produce clean, sustainable and scalable solutions for digital products, software infrastructures and electronic services.',
+        sw_dev_title: 'Software Development',
+        sw_dev_desc: 'We develop web, panel and digital product solutions tailored to your needs.',
+        digital_title: 'Digital Services',
+        digital_desc: 'We provide reliable electronic service infrastructures supporting brands\' operations.',
+        tech_title: 'Technical Processes',
+        tech_desc: 'We follow a technical approach that puts continuity, maintenance and user experience at the center.',
+        games_title: 'Our Games',
+        games_desc: 'Discover our original, fun and modern game projects. Click on games to see detailed screenshots.',
+        gallery_btn: 'View Gallery',
+        gallery_suffix: '— Screenshots',
+        lingo_desc: 'Challenging word puzzles and letter guessing game.',
+        okey_desc: 'Classic okey fun with fluid AI and modern design.',
+        platform_desc: 'A reflex and adventure game requiring precise control.',
+        savas_desc: 'An action-packed racing simulation where conflict meets speed.',
+        siyaset_desc: 'A governance simulation with strategic decisions and election campaigns.',
+        about_title: 'About Us',
+        about_desc: 'Medveri produces reliable solutions in the digital world.',
+        about_p1: 'MEDVERI BILISIM YAZILIM TEKNOLOJILERI VE ELEKTRONIK HIZMETLER LIMITED SIRKETI operates in the field of software technologies and electronic services.',
+        about_p2: 'Focusing on digital products and electronic services, we aim to provide reliable, fast and user-centered solutions. We closely follow technological developments to provide our customers with up-to-date, sustainable and applicable digital products.',
+        mission_title: 'Our Mission',
+        mission_desc: 'To provide secure infrastructure, transparent processes and high satisfaction by putting user needs at the center.',
+        vision_title: 'Our Vision',
+        vision_desc: 'To become a reliable, innovative and preferred brand in digital products and software.',
+        values_title: 'Our Values',
+        values_desc: 'Producing solutions that provide quality, continuity, teamwork and real value to users.',
+        company_info_title: 'Company Information',
+        tax_office_label: 'Tax Office',
+        tax_no_label: 'Tax ID Number',
+        address_label: 'Business Address',
+        tax_type_label: 'Tax Type',
+        tax_type_value: 'CORPORATE TAX',
+        start_date_label: 'Date of Establishment',
+        activity_label: 'Main Activity',
+        activity_value: '621000 — Computer Programming Activities (System, Database, Network, Web and Custom Software Development, Desktop and Mobile App Development)',
+        contact_title: 'Contact',
+        contact_desc: 'You can reach us for corporate requests and collaborations.',
+        email_label: 'E-mail',
+        address_contact_label: 'Address',
+        form_name: 'Your Name',
+        form_email: 'Your E-mail',
+        form_message: 'Your Message',
+        form_send: 'Send',
+        footer_rights: 'All rights reserved.',
+      }
+    };
+
+    let currentLang = 'tr';
+
+    function applyLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      const t = I18N[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    });
+
+    /* ─────────────────────────────────
+       DARK / LIGHT THEME
+    ───────────────────────────────── */
+    const themeToggle = document.getElementById('theme-toggle');
+    let isDark = true;
+
+    function applyTheme(dark) {
+      isDark = dark;
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      themeToggle.textContent = dark ? '☀️' : '🌙';
+      themeToggle.title = dark ? 'Açık temaya geç' : 'Koyu temaya geç';
+      localStorage.setItem('medveri-theme', dark ? 'dark' : 'light');
+    }
+
+    themeToggle.addEventListener('click', () => applyTheme(!isDark));
+
+    // Restore saved theme
+    const savedTheme = localStorage.getItem('medveri-theme');
+    applyTheme(savedTheme !== 'light');
+
+    /* ─────────────────────────────────
+       SCROLL, REVEAL, GALLERY
+    ───────────────────────────────── */
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Scrollspy: Aktif Navigasyon Takibi
+
+      // Scrollspy
       const sections = document.querySelectorAll('section[id]');
       const navLinks = document.querySelectorAll('.nav a');
 
-      const observerOptions = {
-        root: null,
-        rootMargin: '-30% 0px -60% 0px', // Bölüm ekranın orta kısmına geldiğinde tetikler
-        threshold: 0
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+      const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute('id');
-            navLinks.forEach((link) => {
-              if (link.getAttribute('href') === `#${id}`) {
-                link.setAttribute('aria-current', 'page');
-              } else {
-                link.removeAttribute('aria-current');
-              }
+            navLinks.forEach(link => {
+              link.toggleAttribute('aria-current', link.getAttribute('href') === `#${id}`);
             });
           }
         });
-      }, observerOptions);
+      }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
 
-      sections.forEach((section) => observer.observe(section));
+      sections.forEach(s => spyObserver.observe(s));
 
-      // Bölümleri yumuşakça gösterme (Fade-in & Slide-up reveal)
-      const revealObserverOptions = {
-        root: null,
-        threshold: 0.05,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
+      // Scroll reveal
       const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-          }
-        });
-      }, revealObserverOptions);
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+      }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
 
-      // ID'si olsun veya olmasın, tüm section ve hero alanlarını izle
-      document.querySelectorAll('.section, .hero').forEach((sec) => revealObserver.observe(sec));
+      document.querySelectorAll('.section, .hero').forEach(s => revealObserver.observe(s));
 
-      // 2. Custom requestAnimationFrame Tabanlı Pürüzsüz Kaydırma (OS Ayarlarından Bağımsız)
-      function smoothScrollTo(targetPosition, duration = 800) {
-        const startPosition = window.pageYOffset || document.documentElement.scrollTop;
-        const distance = targetPosition - startPosition;
+      // Smooth scroll
+      function smoothTo(target, duration = 900) {
+        const start = window.pageYOffset;
+        const dist = target - start;
         let startTime = null;
-
-        function easeOutCubic(t) {
-          return 1 - Math.pow(1 - t, 3);
+        const ease = t => 1 - Math.pow(1 - t, 3);
+        function step(now) {
+          if (!startTime) startTime = now;
+          const t = Math.min((now - startTime) / duration, 1);
+          window.scrollTo(0, start + dist * ease(t));
+          if (t < 1) requestAnimationFrame(step);
         }
-
-        function animation(currentTime) {
-          if (startTime === null) startTime = currentTime;
-          const timeElapsed = currentTime - startTime;
-          const run = easeOutCubic(Math.min(timeElapsed / duration, 1));
-          
-          window.scrollTo(0, startPosition + distance * run);
-
-          if (timeElapsed < duration) {
-            requestAnimationFrame(animation);
-          }
-        }
-
-        requestAnimationFrame(animation);
+        requestAnimationFrame(step);
       }
 
       document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', e => {
           const href = link.getAttribute('href');
-          if (href.startsWith('#')) {
+          const target = document.getElementById(href.slice(1));
+          if (target) {
             e.preventDefault();
-            const targetId = href.substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-              const headerHeight = document.querySelector('.site-header').offsetHeight || 80;
-              const targetPosition = targetSection.offsetTop - headerHeight;
-
-              smoothScrollTo(targetPosition, 900); // 900ms süren ease-out kaydırma
-
-              // URL hash'ini tarayıcıyı zıplatmadan güncelle
-              history.pushState(null, null, href);
-            }
+            const offset = document.querySelector('.site-header').offsetHeight || 80;
+            smoothTo(target.offsetTop - offset);
+            history.pushState(null, null, href);
           }
         });
       });
 
-      // Sayfa yüklendiğinde URL'de hash varsa ofsetli pürüzsüz kaydır
       if (window.location.hash) {
-        const targetId = window.location.hash.substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
+        const target = document.getElementById(window.location.hash.slice(1));
+        if (target) {
           setTimeout(() => {
-            const headerHeight = document.querySelector('.site-header').offsetHeight || 80;
-            const targetPosition = targetSection.offsetTop - headerHeight;
-            smoothScrollTo(targetPosition, 900);
+            const offset = document.querySelector('.site-header').offsetHeight || 80;
+            smoothTo(target.offsetTop - offset);
           }, 200);
         }
       }
 
-      // 3. Galeri ve Lightbox Mantığı
-      const galleryModal = document.getElementById('gallery-modal');
-      const galleryTitle = document.getElementById('gallery-title');
-      const galleryGrid = document.getElementById('gallery-grid');
-      const closeGalleryBtn = document.getElementById('close-gallery');
-
+      // Gallery
+      const galleryModal  = document.getElementById('gallery-modal');
+      const galleryTitle  = document.getElementById('gallery-title');
+      const galleryGrid   = document.getElementById('gallery-grid');
+      const closeGallery  = document.getElementById('close-gallery');
       const lightboxModal = document.getElementById('lightbox-modal');
-      const lightboxImage = document.getElementById('lightbox-image');
-      const closeLightboxBtn = document.getElementById('close-lightbox');
-      const prevLightboxBtn = document.getElementById('prev-lightbox');
-      const nextLightboxBtn = document.getElementById('next-lightbox');
+      const lightboxImg   = document.getElementById('lightbox-image');
+      const closeLightbox = document.getElementById('close-lightbox');
+      const prevBtn       = document.getElementById('prev-lightbox');
+      const nextBtn       = document.getElementById('next-lightbox');
+      const body          = document.body;
 
-      const body = document.body;
+      let images = [], idx = 0;
 
-      let currentImages = [];
-      let currentImageIndex = 0;
+      const updateLB = () => { if (images.length) lightboxImg.src = images[idx]; };
+      const prev = () => { idx = (idx - 1 + images.length) % images.length; updateLB(); };
+      const next = () => { idx = (idx + 1) % images.length; updateLB(); };
 
-      // Lightbox görselini güncelle
-      function updateLightbox() {
-        if (currentImages.length > 0) {
-          lightboxImage.src = currentImages[currentImageIndex];
-        }
-      }
+      prevBtn.addEventListener('click', e => { e.stopPropagation(); prev(); });
+      nextBtn.addEventListener('click', e => { e.stopPropagation(); next(); });
 
-      function showPrevImage() {
-        if (currentImages.length > 0) {
-          currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
-          updateLightbox();
-        }
-      }
+      const open  = m => { m.classList.add('active'); m.setAttribute('aria-hidden', 'false'); body.classList.add('modal-open'); };
+      const close = m => { m.classList.remove('active'); m.setAttribute('aria-hidden', 'true'); if (!document.querySelector('.modal-overlay.active')) body.classList.remove('modal-open'); };
 
-      function showNextImage() {
-        if (currentImages.length > 0) {
-          currentImageIndex = (currentImageIndex + 1) % currentImages.length;
-          updateLightbox();
-        }
-      }
-
-      // İleri/Geri buton dinleyicileri
-      prevLightboxBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showPrevImage();
-      });
-
-      nextLightboxBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showNextImage();
-      });
-
-      // Oyun kartlarına tıklama
-      document.querySelectorAll('.game-card').forEach((card) => {
+      document.querySelectorAll('.game-card').forEach(card => {
         card.addEventListener('click', () => {
-          const gameName = card.getAttribute('data-game');
-          const imagesStr = card.getAttribute('data-images');
-          const images = imagesStr ? imagesStr.split(',') : [];
-
-          currentImages = images;
-          currentImageIndex = 0;
-
-          // Başlığı ayarla
-          galleryTitle.textContent = `${gameName} - Ekran Görüntüleri`;
-
-          // Izgarayı temizle ve doldur
+          const name = card.dataset.game;
+          images = (card.dataset.images || '').split(',');
+          idx = 0;
+          const t = I18N[currentLang];
+          galleryTitle.textContent = `${name} ${t.gallery_suffix || '— Ekran Görüntüleri'}`;
           galleryGrid.innerHTML = '';
-          images.forEach((imgSrc, index) => {
-            const wrapper = document.createElement('div');
-            wrapper.className = 'gallery-item';
-            
+          images.forEach((src, i) => {
+            const wrap = document.createElement('div');
+            wrap.className = 'gallery-item';
             const img = document.createElement('img');
-            img.src = imgSrc;
-            img.alt = `${gameName} Ekran Görüntüsü`;
+            img.src = src;
+            img.alt = `${name} Ekran Görüntüsü`;
             img.loading = 'lazy';
-
-            wrapper.appendChild(img);
-            galleryGrid.appendChild(wrapper);
-
-            // Görsele tıklandığında Lightbox açılması
-            wrapper.addEventListener('click', (e) => {
-              e.stopPropagation(); // Galeri modalı tıklama olayını engelle
-              currentImageIndex = index;
-              updateLightbox();
-              openModal(lightboxModal);
+            wrap.appendChild(img);
+            galleryGrid.appendChild(wrap);
+            wrap.addEventListener('click', e => {
+              e.stopPropagation();
+              idx = i;
+              updateLB();
+              open(lightboxModal);
             });
           });
-
-          // Galeri modalını aç
-          openModal(galleryModal);
+          open(galleryModal);
         });
       });
 
-      // Modalları açma / kapama yardımcı fonksiyonları
-      function openModal(modal) {
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        body.classList.add('modal-open');
-      }
+      closeGallery.addEventListener('click',  () => close(galleryModal));
+      closeLightbox.addEventListener('click', () => close(lightboxModal));
+      galleryModal.addEventListener('click',  e => { if (e.target === galleryModal)  close(galleryModal); });
+      lightboxModal.addEventListener('click', e => { if (e.target === lightboxModal) close(lightboxModal); });
 
-      function closeModal(modal) {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        
-        // Eğer hiçbir modal aktif değilse body scroll'unu geri getir
-        if (!document.querySelector('.modal-overlay.active')) {
-          body.classList.remove('modal-open');
-        }
-      }
-
-      // Kapatma butonları dinleyicileri
-      closeGalleryBtn.addEventListener('click', () => closeModal(galleryModal));
-      closeLightboxBtn.addEventListener('click', () => closeModal(lightboxModal));
-
-      // Dış alana tıklayarak kapatma
-      galleryModal.addEventListener('click', (e) => {
-        if (e.target === galleryModal) {
-          closeModal(galleryModal);
-        }
-      });
-
-      lightboxModal.addEventListener('click', (e) => {
-        if (e.target === lightboxModal) {
-          closeModal(lightboxModal);
-        }
-      });
-
-      // ESC ve ok tuşları ile kontrol
-      document.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown', e => {
         if (e.key === 'Escape') {
-          if (lightboxModal.classList.contains('active')) {
-            closeModal(lightboxModal);
-          } else if (galleryModal.classList.contains('active')) {
-            closeModal(galleryModal);
-          }
+          if (lightboxModal.classList.contains('active')) close(lightboxModal);
+          else if (galleryModal.classList.contains('active')) close(galleryModal);
         } else if (lightboxModal.classList.contains('active')) {
-          if (e.key === 'ArrowLeft') {
-            showPrevImage();
-          } else if (e.key === 'ArrowRight') {
-            showNextImage();
-          }
+          if (e.key === 'ArrowLeft') prev();
+          else if (e.key === 'ArrowRight') next();
         }
       });
     });
   </script>
+
 </body>
 </html>
