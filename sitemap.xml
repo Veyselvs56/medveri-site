@@ -12,4 +12,16 @@
     <loc>https://medveri.global/contact/</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://medveri.global/gizlilik/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://medveri.global/kullanim-kosullari/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://medveri.global/hesap-silme/</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset>
