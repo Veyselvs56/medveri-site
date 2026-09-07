@@ -241,7 +241,7 @@
             <p style="color:var(--muted);font-size:16px;line-height:1.6;margin:8px 0 0">Ataşehir Mah. 2513 Sk No:3/1<br>Elazığ / Merkez</p>
           </div>
         </div>
-        <form action="mailto:info@medveri.global" method="post" enctype="text/plain">
+        <form id="contact-form" action="mailto:info@medveri.global" method="post" enctype="text/plain">
           <label>
             <span data-i18n="form_name">Adınız</span>
             <input name="name" type="text" autocomplete="name" required>
@@ -255,6 +255,7 @@
             <textarea name="message" rows="5" required></textarea>
           </label>
           <button class="button primary" type="submit" data-i18n="form_send">Gönder</button>
+          <p id="contact-status" role="status" style="margin:10px 0 0;min-height:1.2em"></p>
         </form>
       </div>
     </section>
@@ -264,6 +265,7 @@
   <footer class="site-footer">
     <p>&copy; 2026 MEDVERİ BİLİŞİM YAZILIM TEKNOLOJİLERİ VE ELEKTRONİK HİZMETLER LİMİTED ŞİRKETİ. <span data-i18n="footer_rights">Tüm hakları saklıdır.</span></p>
     <p style="margin:6px 0 0"><span data-i18n="tax_no_label">Vergi Kimlik No</span>: <strong>6141917898</strong> &nbsp;|&nbsp; <span data-i18n="tax_office_label">Vergi Dairesi</span>: HARPUT &nbsp;|&nbsp; <a href="mailto:info@medveri.global">info@medveri.global</a></p>
+    <p style="margin:10px 0 0"><a href="/gizlilik/">Gizlilik Politikas&#305;</a> &nbsp;|&nbsp; <a href="/kullanim-kosullari/">Kullan&#305;m Ko&#351;ullar&#305;</a> &nbsp;|&nbsp; <a href="/hesap-silme/">Hesap Silme</a></p>
   </footer>
 
   <!-- Gallery Modal -->
@@ -589,5 +591,28 @@
     });
   </script>
 
+
+  <script>
+    /* A mailto: form posted by the browser goes nowhere: pressing Gönder used to do nothing at all and say
+       nothing either. There is no backend on this host, so the honest fix is to hand the message to the
+       visitor's own mail client with the fields already filled in, and to say so on screen. */
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      var status = document.getElementById('contact-status');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = (form.elements.name && form.elements.name.value || '').trim();
+        var email = (form.elements.email && form.elements.email.value || '').trim();
+        var message = (form.elements.message && form.elements.message.value || '').trim();
+        if (!name || !email || !message) return;
+        var subject = 'Medveri iletisim - ' + name;
+        var body = name + ' (' + email + ')\n\n' + message;
+        window.location.href = 'mailto:info@medveri.global?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+        if (status) status.textContent = 'E-posta uygulaman aciliyor. Acilmazsa info@medveri.global adresine yazabilirsin.';
+      });
+    })();
+  </script>
 </body>
 </html>
